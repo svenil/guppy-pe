@@ -420,6 +420,11 @@ The latest version is on GitHub:
 ...li
 ....a:https://github.com/svenil/guppy-pe
 .....href=https://github.com/svenil/guppy-pe
+..p: To check out the latest revision, you can do:
+
+..pre
+git clone https://github.com/svenil/guppy-pe.git guppy-pe
+
 ..p
 In version 0.1.11 I have added checks for Python2 and pointers to the version
 for Python3, Guppy3:

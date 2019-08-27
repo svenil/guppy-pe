@@ -1,9 +1,10 @@
 This is Guppy-PE version 0.1.11
 
-A Python Programming Environment.
+A Python Programming Environment with Heapy heap analysis toolset.
 
 Note that his package is for Python2 only. There is a fork that is
 ported and recommended for Python3 at:
+
 https://github.com/zhuyifei1999/guppy3
 
 CONTENTS
@@ -32,7 +33,7 @@ specs/genguppydoc.py	Regenerates the doc/*.html files from specs/*.gsl
 
 REQUIREMENTS
 
-You should have Python 2.3, 2.4, 2.5 or 2.6
+You should have Python 2.3, 2.4, 2.5, 2.6 or 2.7
 
 To build the system so you can use Heapy, you should have what is
 needed to build extension modules from source code. The extension
@@ -126,7 +127,7 @@ Caveat 2: All tests don't currently work always in Python 2.7
 
 LICENSE
 
-Copyright (C) 2005 -- 2008 Sverker Nilsson, S. Nilsson Computer System AB
+Copyright (C) 2005 -- 2019 Sverker Nilsson, S. Nilsson Computer System AB
 
 The right is granted to copy, use, modify and redistribute this code
 according to the rules in what is commonly referred to as an MIT
@@ -137,4 +138,4 @@ license.
 CONTACT INFORMATION
 
 Sverker Nilsson <sn@sncs.se> (Homepage: http://sncs.se)
-Guppy-PE homepage: http://guppy-pe.sourceforge.net
+Guppy-PE homepage: https://svenil.github.io/guppy-pe
