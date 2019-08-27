@@ -1,0 +1,8 @@
+guppy/doc/*,gsl-backuped
+guppy/doc/docexample.py
+guppy/doc/heapyc.tex
+guppy/doc/sets.tex
+guppy/doc/test_guppy.py
+guppy/doc/test_heapy.py
+guppy/doc/test_heapyc.py
+*~
