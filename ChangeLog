@@ -1,3 +1,10 @@
+0.1.11
+	
+2019-08-26  sverker  <sverker@sverker-HP-Pavilion-g6-Notebook-PC>
+
+	* Added information that this is for Python 2 only and a Python 3
+	version is available.
+
 	guppy 0.1.10
 	
 	

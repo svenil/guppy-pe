@@ -1,6 +1,10 @@
-This is Guppy-PE version 0.1.10
+This is Guppy-PE version 0.1.11
 
 A Python Programming Environment.
+
+Note that his package is for Python2 only. There is a fork that is
+ported and recommended for Python3 at:
+https://github.com/zhuyifei1999/guppy3
 
 CONTENTS
 
