@@ -2,7 +2,7 @@ Metadata-Version: 1.0
 Name: guppy
 Version: 0.1.11
 Summary: Guppy-PE -- A Python Programming Environment
-Home-page: https://svenil.github.io/guppy-pe
+Home-page: https://svenil.github.io/guppy-pe/
 Author: Sverker Nilsson
 Author-email: sn@sncs.se
 License: MIT
