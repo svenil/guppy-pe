@@ -394,10 +394,9 @@ rationale and some use cases for Heapy (version 0.1).
 ......id=last
 ......colspan=5
 
-..c
-...h3: External resources
+..h3: External resources
 
-...p: Thanks to all that have written about Heapy on various blogs. I
+..p: Thanks to all that have written about Heapy on various blogs. I
 think the following links may be especially useful to get
 started. More tips are very welcome!
 
@@ -417,7 +416,7 @@ started. More tips are very welcome!
 ..p
 
 The latest version is on GitHub:
-...li
+...br
 ....a:https://github.com/svenil/guppy-pe
 .....href=https://github.com/svenil/guppy-pe
 ..p: To check out the latest revision, you can do:
@@ -428,7 +427,7 @@ git clone https://github.com/svenil/guppy-pe.git guppy-pe
 ..p
 In version 0.1.11 I have added checks for Python2 and pointers to the version
 for Python3, Guppy3:
-...li
+...br
 ....a:https://github.com/zhuyifei1999/guppy3/
 .....href=https://github.com/zhuyifei1999/guppy3/
 ..p
@@ -454,11 +453,11 @@ and Python 2.7 on an Intel Core I5.
 ....td
 .....a: guppy-0.1.11
 ......href=http://pypi.python.org/pypi/guppy/0.1.11
-....td: Updated 2019-07-26. Contains check for Python version 2 and pointers to
+....td: Updated 2019-07-28. Contains check for Python version 2 and pointers to
 the Guppy3 version at:
-.....p
-.....a:https://github.com/zhuyifei1999/guppy3/
-......href=https://github.com/zhuyifei1999/guppy3/
+.....br
+......a:https://github.com/zhuyifei1999/guppy3/
+.......href=https://github.com/zhuyifei1999/guppy3/
 ...tr
 ....class=odd
 ....td
@@ -581,6 +580,12 @@ problems with other MS compilers, Cygwin & Mingw as well.
 
 ...li: Yaroslav Halchenko is packaging and uploading Guppy into the
 Debian distribution.
+
+...li: YiFei Zhu has ported to Python 3 creating Guppy3. It can be reached here:
+....br
+.....a:https://github.com/zhuyifei1999/guppy3/
+......href=https://github.com/zhuyifei1999/guppy3/
+
 
 ..a
 ...name=Contact
