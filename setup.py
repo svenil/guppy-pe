@@ -70,7 +70,7 @@ sets
 """,
           author="Sverker Nilsson",
           author_email="sn@sncs.se",
-          url="http://guppy-pe.sourceforge.net",
+          url="https://svenil.github.io/guppy-pe",
           license='MIT',
           packages=[
             "guppy",
