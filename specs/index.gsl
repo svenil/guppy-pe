@@ -71,6 +71,14 @@ language that can be used to formally specify aspects of
 
 ...t: programs and generate tests and documentation from a common
 source.
+..p
+
+Note that this package is for Python 2 only. The version
+for Python 3 (recommended!) is available here:
+
+...li
+....a:https://github.com/zhuyifei1999/guppy3/
+.....href=https://github.com/zhuyifei1999/guppy3/
 
 ..a
 ...name=Guppy
@@ -386,29 +394,42 @@ rationale and some use cases for Heapy (version 0.1).
 ......id=last
 ......colspan=5
 
-..c
-...h3: External resources
+..h3: External resources
 
-...p: Thanks to all that have written about Heapy on various blogs. I
+..p: Thanks to all that have written about Heapy on various blogs. I
 think the following links may be especially useful to get
 started. More tips are very welcome!
 
-...ul
-....li
-.....a:How to use guppy/heapy for tracking down memory usage
-......href=http://www.pkgcore.org/trac/pkgcore/doc/dev-notes/heapy.rst
-.....t: (pkgcore - Trac)
-....li
-.....a:Debugging Django memory leak with TrackRefs and Guppy
-......href=http://blog.redinnovation.com/2008/03/07/debugging-django-memory-leak-with-trackrefs-and-guppy
-.....t: (Redi for Life)
+..ul
+...li
+....a:How to use guppy/heapy for tracking down memory usage
+.....href=https://smira.ru/wp-content/uploads/2011/08/heapy.html
+....t: (pkgcore - Trac)
+...li
+....a:Debugging Django memory leak with TrackRefs and Guppy
+.....href=https://opensourcehacker.com/2008/03/07/debugging-django-memory-leak-with-trackrefs-and-guppy/
+....t: (Redi for Life)
 
 ..a
 ...name=Download
 ...h2: Download
 ..p
 
-The latest version is in the svn trunk directory.
+The latest version is on GitHub:
+...br
+....a:https://github.com/svenil/guppy-pe
+.....href=https://github.com/svenil/guppy-pe
+..p: To check out the latest revision, you can do:
+
+..pre
+git clone https://github.com/svenil/guppy-pe.git guppy-pe
+
+..p
+In version 0.1.11 I have added checks for Python2 and pointers to the version
+for Python3, Guppy3:
+...br
+....a:https://github.com/zhuyifei1999/guppy3/
+.....href=https://github.com/zhuyifei1999/guppy3/
 ..p
 In version 0.1.10 I have updated the support for Python 2.7. 
 ..p
@@ -423,21 +444,20 @@ and 2.6, and in 32 bits mode with Ubuntu 9.04 with Python 2.4, 2.5 and
 ..p: As of 2013-04-24, I have tested the latest revision with Ubuntu 12.10 32 bit
 and Python 2.7 on an Intel Core I5.
 
-..p: To check out the latest (HEAD) revision, you can do:
-
-..pre
-svn co https://guppy-pe.svn.sourceforge.net/svnroot/guppy-pe/trunk/guppy guppy
-
-..p: To check out the latest release as of this writing, you can do:
-
-..pre
-svn co -r94 https://guppy-pe.svn.sourceforge.net/svnroot/guppy-pe/trunk/guppy guppy
-
-
 ..h3: Source code releases in tarball format
 ..table
 ...class=list
 ...style=margin-bottom: 10px;
+...tr
+....class=even
+....td
+.....a: guppy-0.1.11
+......href=http://pypi.python.org/pypi/guppy/0.1.11
+....td: Updated 2019-07-28. Contains check for Python version 2 and pointers to
+the Guppy3 version at:
+.....br
+......a:https://github.com/zhuyifei1999/guppy3/
+.......href=https://github.com/zhuyifei1999/guppy3/
 ...tr
 ....class=odd
 ....td
@@ -561,6 +581,12 @@ problems with other MS compilers, Cygwin & Mingw as well.
 ...li: Yaroslav Halchenko is packaging and uploading Guppy into the
 Debian distribution.
 
+...li: YiFei Zhu has ported to Python 3 creating Guppy3. It can be reached here:
+....br
+.....a:https://github.com/zhuyifei1999/guppy3/
+......href=https://github.com/zhuyifei1999/guppy3/
+
+
 ..a
 ...name=Contact
 ...h2: Contact
@@ -581,14 +607,14 @@ are available at:
 ....a: http://lists.sourceforge.net/mailman/listinfo/guppy-pe-list
 .....href=http://lists.sourceforge.net/mailman/listinfo/guppy-pe-list
 
-...dt: Please report bugs preferably via the SourceForge bug tracking
+...dt: Please report bugs preferably via the GitHub bug tracking
 system:
 
 ...dd
-....a: http://sourceforge.net/tracker/?group_id=105577&atid=641821
-.....href=http://sourceforge.net/tracker/?group_id=105577&atid=641821
+....a: https://github.com/svenil/guppy-pe/issues
+.....href=https://github.com/svenil/guppy-pe/issues
 
-...dt: The Sourceforge project summary page is:
+...dt: The GitHub project page is:
 ...dd
-....a: http://sourceforge.net/projects/guppy-pe
-.....href= http://sourceforge.net/projects/guppy-pe
+....a: https://github.com/svenil/guppy-pe/
+.....href= https://github.com/svenil/guppy-pe/

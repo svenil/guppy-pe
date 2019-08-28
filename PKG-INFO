@@ -15,6 +15,10 @@ Description:
         aspects of Python programs and generate tests and documentation from a
         common source.
         
+	Note that his package is for Python2 only. There is a fork
+	that is ported and recommended for Python3 at:
+	https://github.com/zhuyifei1999/guppy3
+
         The guppy top-level package contains the following subpackages:
         
         doc

@@ -1,4 +1,4 @@
-I am happy to announce Guppy-PE 0.1.10
+I am happy to announce Guppy-PE 0.1.11
 
 Guppy-PE is a library and programming environment for Python,
 currently providing in particular the Heapy subsystem, which supports
@@ -10,22 +10,16 @@ common source.
 
 The main news in this release:
 
-o Support for Python 2.7
-  However, there are still some problems with the tests
-  that I haven't been able to sort out.
+Contains notes that this package is only for Python2. A version for
+Python3 is recommended and is available here:
 
-o Some minor bug fixes
+https://github.com/zhuyifei1999/guppy3
 
 License: MIT
 
-Guppy-PE 0.1.10 is available in source tarball format on the Python
-Package Index (a.k.a. Cheeseshop):
+The project homepage is on GitHub:
 
-        http://pypi.python.org/pypi/guppy/0.1.10
-
-The project homepage is on Sourceforge:
-
-        http://guppy-pe.sourceforge.net
+    https://svenil.github.io/guppy-pe
 
 Enjoy,
 
