@@ -444,20 +444,21 @@ and 2.6, and in 32 bits mode with Ubuntu 9.04 with Python 2.4, 2.5 and
 ..p: As of 2013-04-24, I have tested the latest revision with Ubuntu 12.10 32 bit
 and Python 2.7 on an Intel Core I5.
 
-..h3: Source code releases in tarball format
+..h3: Older Source code releases in tarball format
 ..table
 ...class=list
 ...style=margin-bottom: 10px;
-...tr
-....class=even
-....td
-.....a: guppy-0.1.11
-......href=http://pypi.python.org/pypi/guppy/0.1.11
-....td: Updated 2019-07-28. Contains check for Python version 2 and pointers to
+...c
+....tr
+.....class=even
+.....td
+......a: guppy-0.1.11
+.......href=http://pypi.python.org/pypi/guppy/0.1.11
+.....td: Updated 2019-07-28. Contains check for Python version 2 and pointers to
 the Guppy3 version at:
-.....br
-......a:https://github.com/zhuyifei1999/guppy3/
-.......href=https://github.com/zhuyifei1999/guppy3/
+......br
+.......a:https://github.com/zhuyifei1999/guppy3/
+........href=https://github.com/zhuyifei1999/guppy3/
 ...tr
 ....class=odd
 ....td
