@@ -28,7 +28,7 @@ def doit():
         print('''\
 setup.py: Error: This guppy package only supports Python2.
 You can find the recommended Python3 version here:
-https://github.com/zhuyifei1999/guppy3''', file=sys.stderr)
+https://github.com/zhuyifei1999/guppy3''')
 
         exit(1)
     setup(name="guppy",
