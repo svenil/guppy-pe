@@ -28,7 +28,7 @@ def doit():
         print('''\
 setup.py: Error: This guppy package only supports Python2.
 You can find the recommended Python3 version here:
-https://github.com/zhuyifei1999/guppy3''')
+https://github.com/zhuyifei1999/guppy3''', file=sys.stderr)
 
         exit(1)
     setup(name="guppy",
@@ -43,8 +43,8 @@ Specification Language (GSL), which can be used to formally specify
 aspects of Python programs and generate tests and documentation from a
 common source.
 
-Note that his package is for Python2 only. There is a fork that is
-ported and recommended for Python3 at:
+Note that this package is for Python2 only. There is a fork, Guppy3,
+created by YiFei Zhu that is recommended for Python3 at:
 https://github.com/zhuyifei1999/guppy3
 
 The guppy top-level package contains the following subpackages:
