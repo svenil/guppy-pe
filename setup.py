@@ -82,8 +82,13 @@ sets
             "guppy.sets",
             ],
           package_data={"guppy.doc" : ["*.html","*.jpg"]},
-          ext_modules=[setsc, heapyc]
-          )
+          ext_modules=[setsc, heapyc],
+          classifiers=[
+              "Programming Language :: Python :: 2",
+              "License :: OSI Approved :: MIT License",
+              "Operating System :: OS Independent",
+          ]
+    )
 
 doit()
 
