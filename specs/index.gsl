@@ -73,8 +73,8 @@ language that can be used to formally specify aspects of
 source.
 ..p
 
-Note that this package is for Python 2 only. The version
-for Python 3 (recommended!) is available here:
+Note that this package is for Python 2 only. Guppy3, created by YiFei
+Zhu for Python 3 (recommended!) is available here:
 
 ...li
 ....a:https://github.com/zhuyifei1999/guppy3/
