@@ -2,10 +2,10 @@ This is Guppy-PE version 0.1.11
 
 A Python Programming Environment with Heapy heap analysis toolset.
 
-Note that his package is for Python2 only. There is a fork that is
-ported and recommended for Python3 at:
+Note that his package is for Python2 only. Guppy 3, created by YiFei
+Zhu for Python 3 (recommended!) is available here:
 
-https://github.com/zhuyifei1999/guppy3
+https://github.com/zhuyifei1999/guppy3/
 
 CONTENTS
 

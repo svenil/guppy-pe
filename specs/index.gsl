@@ -73,7 +73,7 @@ language that can be used to formally specify aspects of
 source.
 ..p
 
-Note that this package is for Python 2 only. Guppy3, created by YiFei
+Note that this package is for Python 2 only. Guppy 3, created by YiFei
 Zhu for Python 3 (recommended!) is available here:
 
 ...li
@@ -426,7 +426,7 @@ git clone https://github.com/svenil/guppy-pe.git guppy-pe
 
 ..p
 In version 0.1.11 I have added checks for Python2 and pointers to the version
-for Python3, Guppy3:
+for Python3, Guppy 3:
 ...br
 ....a:https://github.com/zhuyifei1999/guppy3/
 .....href=https://github.com/zhuyifei1999/guppy3/
@@ -454,7 +454,7 @@ and Python 2.7 on an Intel Core I5.
 .....a: guppy-0.1.11
 ......href=http://pypi.python.org/pypi/guppy/0.1.11
 ....td: Updated 2019-08-29. Contains check for Python version 2 and pointers to
-the Guppy3 version at: 
+the Guppy 3 version at: 
 .....a:https://github.com/zhuyifei1999/guppy3/
 ......href=https://github.com/zhuyifei1999/guppy3/
 ...tr
@@ -580,7 +580,7 @@ problems with other MS compilers, Cygwin & Mingw as well.
 ...li: Yaroslav Halchenko is packaging and uploading Guppy into the
 Debian distribution.
 
-...li: YiFei Zhu has ported to Python 3 creating Guppy3. It can be reached here:
+...li: YiFei Zhu has ported to Python 3 creating Guppy 3. It can be reached here:
 ....br
 .....a:https://github.com/zhuyifei1999/guppy3/
 ......href=https://github.com/zhuyifei1999/guppy3/
