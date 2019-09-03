@@ -32,7 +32,7 @@ https://github.com/zhuyifei1999/guppy3''')
 
         exit(1)
     setup(name="guppy",
-          version="0.1.11",
+          version="0.1.12",
           description="Guppy-PE -- A Python Programming Environment",
           long_description="""
 Guppy-PE is a library and programming environment for Python2,

@@ -1,4 +1,4 @@
-I am happy to announce Guppy-PE 0.1.11
+I am happy to announce Guppy-PE 0.1.12
 
 Guppy-PE is a library and programming environment for Python,
 currently providing in particular the Heapy subsystem, which supports
@@ -10,16 +10,27 @@ common source.
 
 The main news in this release:
 
-Contains notes that this package is only for Python2. A version for
-Python3 is recommended and is available here:
-
-https://github.com/zhuyifei1999/guppy3
+Fixed test bug. Adapted for continuous integration at Travis.
 
 License: MIT
 
-The project homepage is on GitHub:
+Note that this package is for Python2 only which will be end of life
+in 2020.  There is a fork for Python3, Guppy3 at:
 
-https://svenil.github.io/guppy-pe/
+https://github.com/zhuyifei1999/guppy3
+
+You can still download Guppy-PE for Python2 from Python Package Index:
+
+https://pypi.org/project/guppy/
+
+You can use the following command as long as it supported and if all
+is setup correctly:
+
+pip install guppy
+
+The project homepage is on Sourceforge:
+
+http://guppy-pe.sourceforge.net
 
 Enjoy,
 
