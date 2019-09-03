@@ -3,4 +3,5 @@ matrix:
   include:
     - name: "Python 2.7 on Linux"
       python: 2.7
+install: pip install -ve .
 script: which python &> /dev/null && PYTHON=python || PYTHON=python; $PYTHON --version; $PYTHON -c '__import__("guppy").hpy().test()'
