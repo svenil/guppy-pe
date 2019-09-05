@@ -1,17 +1,17 @@
 ;;; gsl-mode.el --- Major mode for editing GSL.
 ;;; Based on a copy of python-mode.el.
 
-;; Copyright (C) 2005 Sverker Nilsson
+;; Copyright (C) 2005,2019 Sverker Nilsson
 ;; Copyright (C) 1992,1993,1994  Tim Peters
 
-;; Author: 2005      Sverker Nilsson
+;; Author: 2005,2019 Sverker Nilsson
 ;;         1995-1997 Barry A. Warsaw
 ;;         1992-1994 Tim Peters
 
-;; Maintainer:    sverker.is@home.se
+;; Maintainer:    sn@sncs.se
 ;; Created:       Jun 20, 2005
-;; Version:       0.1
-;; Last Modified: Nov 23, 2005
+;; Version:       0.1.1
+;; Last Modified: Sep 4, 2019
 ;; Keywords: gsl guppy specification language
 
 ;; This software is provided as-is, without express or implied
