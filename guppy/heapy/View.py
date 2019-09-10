@@ -57,7 +57,8 @@ class _GLUECLAMP_:
 	)
 
 
-    _chgable_ =  ('is_rg_update_all', 'referrers_lock', '_is_clear_drg_enabled')
+    _chgable_ =  ('is_rg_update_all', 'referrers_lock',
+                  '_is_clear_drg_enabled', '_local_clear_hook_handle')
     _setable_ =  ('_hiding_tag_','target', 'is_hiding_calling_interpreter',
 
 		  )
@@ -90,13 +91,14 @@ class _GLUECLAMP_:
 	except IndexError:
 	    self.clear_setup()
 	else:
-	    c = wr()
-	    if c is None:
+	    self._local_clear_hook_handle = wr()
+	    if self._local_clear_hook_handle is None:
 		self.clear_setup()
-	    elif self._root.sys.getrefcount(c) > 3:
+	    elif self._root.sys.getrefcount(self._local_clear_hook_handle) > 3:
 		print 'GC hook object was referred to from somebody!'
 		self.clear_callback(wr)
-		c.cb.callback = None
+		self._local_clear_hook_handle.cb.callback = None
+            self._local_clear_hook_handle = None # del doesn't work?
 
     def clear_callback(self, wr):
 	# print 'clear callback'
