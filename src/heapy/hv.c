@@ -831,19 +831,37 @@ defined by HV. See also HeapView.__doc__.");
 typedef struct {
     NyHeapViewObject *hv;
     NyNodeSetObject *visited;
+    PyObject *to_visit;
 } HeapTravArg;
+
+static int
+hv_heap_rec_push(PyObject *obj, HeapTravArg *ta) {
+    PyList_Append(ta->to_visit, obj);
+    return 0;
+}
 
 static int
 hv_heap_rec(PyObject *obj, HeapTravArg *ta) {
     int r;
-    r = NyNodeSet_setobj(ta->visited, obj);
-    if (r)
-      return r < 0 ? r: 0;
-    else {
-	return hv_std_traverse(ta->hv, obj, (visitproc)hv_heap_rec, ta);
+    PyList_Append(ta->to_visit, obj);
+    while (Py_SIZE(ta->to_visit) > 0) {
+      obj = PyObject_CallMethod(ta->to_visit, "pop", NULL);
+      r = NyNodeSet_setobj(ta->visited, obj);
+      if (r) {
+	Py_DECREF(obj);
+	if (r < 0)
+	  return r;
+      }
+      else {
+        r = hv_std_traverse(ta->hv, obj, (visitproc)hv_heap_rec_push, ta);
+	Py_DECREF(obj);
+	if (r < 0)
+	  return r;
+      }
     }
-
+    return 0;
 }
+
 
 static int
 hv_update_static_types_visitor(PyObject *obj, NyHeapViewObject *hv) {
@@ -866,7 +884,8 @@ hv_heap(NyHeapViewObject *self, PyObject *args, PyObject *kwds)
     HeapTravArg ta;
     ta.hv = self;
     ta.visited = hv_mutnodeset_new(self);
-    if (!ta.visited)
+    ta.to_visit = PyList_New(0);
+    if (!(ta.visited && ta.to_visit))
       goto err;
     if (hv_heap_rec(ta.hv->root, &ta) == -1)
       goto err;
@@ -876,9 +895,11 @@ hv_heap(NyHeapViewObject *self, PyObject *args, PyObject *kwds)
 	if (hv_update_static_types(self, (PyObject *)ta.visited) == -1)
 	  goto err;
     }
+    Py_DECREF(ta.to_visit);
     return (PyObject *)ta.visited;
   err:
     Py_XDECREF(ta.visited);
+    Py_XDECREF(ta.to_visit);
     return 0;
 }
 
