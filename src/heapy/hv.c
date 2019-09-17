@@ -836,8 +836,7 @@ typedef struct {
 
 static int
 hv_heap_rec_push(PyObject *obj, HeapTravArg *ta) {
-    PyList_Append(ta->to_visit, obj);
-    return 0;
+    return PyList_Append(ta->to_visit, obj);
 }
 
 static int
