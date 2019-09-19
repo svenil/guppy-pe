@@ -209,9 +209,11 @@ class FirstCase(TestCase):
 		a = s[i].kind
 		ra = repr(a)
 		# print ra
-		era = eval(ra)
+                era = eval(ra, {'hp': hp}, {})
 		self.aseq(a, era)
 
+                #import pdb
+                #pdb.set_trace()
 		self.aseq(s&era,
 			  s[i])
 
