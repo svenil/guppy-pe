@@ -413,7 +413,7 @@ started. More tips are very welcome!
 .....href=http://leastsignificant.blogspot.com/2015/06/digging-into-python-memory-issues-in.html
 ...li
 ....a: Large memory leak in datastore API
-.....href=http://leastsignificant.blogspot.com/2015/06/digging-into-python-memory-issues-in.html
+.....href=https://www.bountysource.com/issues/3155285-large-memory-leak-in-datastore-api
 
 
 ..a
