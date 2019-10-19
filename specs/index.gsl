@@ -409,8 +409,14 @@ started. More tips are very welcome!
 .....href=https://opensourcehacker.com/2008/03/07/debugging-django-memory-leak-with-trackrefs-and-guppy/
 ....t: (Redi for Life)
 ...li
+....a:Diagnosing Memory “Leaks” in Python
+.....href=https://chase-seibert.github.io/blog/2013/08/03/diagnosing-memory-leaks-python.html
+...li
 ....a: Digging into python memory issues in ckan with heapy
 .....href=http://leastsignificant.blogspot.com/2015/06/digging-into-python-memory-issues-in.html
+...li
+....a: Optimizing memory usage in Python: a case study
+.....href=https://guillaume.segu.in/blog/code/487/optimizing-memory-usage-in-python-a-case-study/
 
 ..a
 ...name=Download
