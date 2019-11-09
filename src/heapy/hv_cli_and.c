@@ -234,7 +234,7 @@ nodetuple_richcompare(PyObject *v, PyObject *w, int op)
 	 */
 	for (i = 0; i < vlen && i < wlen; i++) {
 	    vi = (long)vt->ob_item[i];
-	    wi = (long)vt->ob_item[i];
+	    wi = (long)wt->ob_item[i];
 	    if (vi != wi)
 	      break;
 	}
