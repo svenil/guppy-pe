@@ -577,6 +577,15 @@ hv_is_obj_hidden(NyHeapViewObject *hv, PyObject *obj)
     } else if (type == &NyRootState_Type) {
 	/* Fixes a dominos confusion; see Notes Apr 20 2005 */
 	return 1;
+    } else {
+      PyObject **dp = 0;
+      if (PyType_Check(obj)) /* Doesnt work generally; Note Apr 8 2005 */
+        dp = &((PyTypeObject *)obj)->tp_dict;
+      else
+        dp = _PyObject_GetDictPtr(obj);
+      if (dp && *dp && (PyDict_GetItem(*dp, _hiding_tag__name) == hv->_hiding_tag_)) {
+	return 1;
+      }
     }
     return 0;
 }
@@ -831,36 +840,21 @@ defined by HV. See also HeapView.__doc__.");
 typedef struct {
     NyHeapViewObject *hv;
     NyNodeSetObject *visited;
-    PyObject *to_visit;
 } HeapTravArg;
-
-static int
-hv_heap_rec_push(PyObject *obj, HeapTravArg *ta) {
-    return PyList_Append(ta->to_visit, obj);
-}
 
 static int
 hv_heap_rec(PyObject *obj, HeapTravArg *ta) {
     int r;
-    PyList_Append(ta->to_visit, obj);
-    while (Py_SIZE(ta->to_visit) > 0) {
-      obj = PyObject_CallMethod(ta->to_visit, "pop", NULL);
-      r = NyNodeSet_setobj(ta->visited, obj);
-      if (r) {
-	Py_DECREF(obj);
-	if (r < 0)
-	  return r;
-      }
-      else {
-        r = hv_std_traverse(ta->hv, obj, (visitproc)hv_heap_rec_push, ta);
-	Py_DECREF(obj);
-	if (r < 0)
-	  return r;
-      }
+    if (hv_is_obj_hidden(ta->hv, obj) && obj->ob_type != &NyRootState_Type) 
+	return 0;
+    r = NyNodeSet_setobj(ta->visited, obj);
+    if (r)
+      return r < 0 ? r: 0;
+    else {
+	return hv_std_traverse(ta->hv, obj, (visitproc)hv_heap_rec, ta);
     }
-    return 0;
-}
 
+}
 
 static int
 hv_update_static_types_visitor(PyObject *obj, NyHeapViewObject *hv) {
@@ -883,8 +877,7 @@ hv_heap(NyHeapViewObject *self, PyObject *args, PyObject *kwds)
     HeapTravArg ta;
     ta.hv = self;
     ta.visited = hv_mutnodeset_new(self);
-    ta.to_visit = PyList_New(0);
-    if (!(ta.visited && ta.to_visit))
+    if (!ta.visited)
       goto err;
     if (hv_heap_rec(ta.hv->root, &ta) == -1)
       goto err;
@@ -894,11 +887,9 @@ hv_heap(NyHeapViewObject *self, PyObject *args, PyObject *kwds)
 	if (hv_update_static_types(self, (PyObject *)ta.visited) == -1)
 	  goto err;
     }
-    Py_DECREF(ta.to_visit);
     return (PyObject *)ta.visited;
   err:
     Py_XDECREF(ta.visited);
-    Py_XDECREF(ta.to_visit);
     return 0;
 }
 

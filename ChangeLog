@@ -1,3 +1,15 @@
+2019-11-19  sverker  <sverker@sverker-HP-Pavilion-g6-Notebook-PC>
+
+	* hv.c: Fix for not finding hidden objects
+
+2019-11-11  sverker  <sverker@sverker-HP-Pavilion-g6-Notebook-PC>
+
+	* Fixed erroneous assignment in hv_cli_and.c
+	* Previous:
+	* Faster hv_cli_dictof.c by using Guppy3 version with gc_get_objects
+	* Faster startup in View.py
+	* And others, it is in the Git log.
+
 0.1.11
 	
 2019-08-26  sverker  <sverker@sverker-HP-Pavilion-g6-Notebook-PC>
